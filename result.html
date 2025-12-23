@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Result</title></head>
+<body>
+<h2>Schedule</h2>
+{% if schedule %}
+<ul>
+{% for p,t,s in schedule %}
+<li>{{p}} → {{t}} ({{s}})</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No feasible schedule</p>
+{% endif %}
+<a href="/">Back</a>
+</body>
+</html>
